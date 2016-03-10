@@ -18,11 +18,15 @@ public class MowerController {
 
 	@RequestMapping("/rungame")
 	public String resultgame(Model model) throws Exception {
-		model.addAttribute("resultat", runGame());
+		model.addAttribute("resultat", getResultRunGame());
 		return "resultgame";
 	}
 
-	private String runGame() {
+	/**
+	 * Appel au service pour la lecture du fichier et execution du jeu
+	 * @return le résultat du jeu
+	 */
+	private String getResultRunGame() {
 		StringBuilder sb = new StringBuilder();
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("spring/applicationContext.xml");
 		MowerMouvementServiceImpl mouvementService = ctx.getBean(MowerMouvementServiceImpl.class);
