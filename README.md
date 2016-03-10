@@ -2,7 +2,7 @@
 
 Pour lancer le projet :
 
-- Run la classe
+- Run la classe MowerMain
 
 - Aller sur un navigateur sur l'adresse localhost:8080/rungame
 
